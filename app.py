@@ -13,3 +13,7 @@ def projets():
 @app.route('/apropos')
 def apropos():
     return render_template('apropos.html')
+
+@app.route('/projets/projet')
+def projet():
+    return render_template('projet.html')

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+    Projet
+{% endblock title %}
+
+{% block content %}
+
+    <div class="pj-title">
+        <h1>Title</h1>
+        <span>Institution</span><span>Tache</span>
+        <p>
+            Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit, sed diam nonummy.
+        </p>
+    </div>
+
+    <section class="gallery">
+        <div class="slider middle">
+            <div class="slides">
+                
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+
+                <div class="slide s1">
+                    <img src="{{ url_for('static', filename='img/placeholder.png') }}" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="{{ url_for('static', filename='img/placeholder2.png') }}" alt="">
+                    
+                </div>
+
+                <div class="slide">
+                    <img src="{{ url_for('static', filename='img/placeholder3.png') }}" alt="">
+                    
+                </div>
+
+                <div class="slide">
+                    <img src="{{ url_for('static', filename='img/placeholder4.png') }}" alt="">
+
+                </div>
+
+            </div>
+
+            <div class="img-navbar">
+                <label for="r1" class="bar"></label>
+                <label for="r2" class="bar"></label>
+                <label for="r3" class="bar"></label>
+                <label for="r4" class="bar"></label>
+            </div>
+        </div>
+    </section>
+
+
+    </div>
+
+    <div class="pj-content">
+        <div class="side-card">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur
+                 adipisicing elit. Nisi eaque provident
+                  facilis doloremque non, quos, debitis
+                   repudiandae rerum vitae ab vero?
+            </p>
+        </div>
+        <div class="pj-text">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur
+                 adipisicing elit. Nisi eaque provident
+                  facilis doloremque non, quos, debitis
+                   repudiandae rerum vitae ab vero? 
+                   Quam sapiente repudiandae sed quas 
+                   a dolores ipsum minima?
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5 {
     font-family: 'Patua One';
     font-weight: 400;
 }
-p, a {
+p, a, span {
     font-family: 'Montserrat';
 }
 
@@ -25,6 +25,7 @@ ul {
     height: 120vh;
     z-index: -1;
     right: 0;
+    top: 0;
 }
 
 .social {
@@ -571,11 +572,125 @@ blockquote span {
 
 }
 
-
-
-
 /* FIN CSS APROPOS */
 
+   /* START PROJET CSS */
+
+   .pj-title {
+    margin: 8em 5em 1em;
+    color: #ededed;
+}
+.pj-title h1 {
+    margin-bottom: 0;
+}
+
+.pj-title span {
+    margin-right: .8em;
+    font-size: .7em;
+}
+
+.pj-content {
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    grid-template-columns: 1fr;
+    gap: .7em;
+}
+
+.pj-content .side-card {
+    margin: auto;
+    width: 80%;
+    height: 10vh;
+    background: #ededed;
+}
+.pj-content .side-card p {
+    color: #1c1c1c;
+    text-align: center;
+    font-size: .7em;
+}
+
+.pj-content .pj-text {
+    text-align: center;
+    color: #ededed;
+}
+
+/* SLIDER */
+
+.gallery {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+}
+
+.slider {
+    width: 80%;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-navbar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar {
+    width: 20px;
+    height: 10px;
+    border: 2px solid #1c1c1c;
+    margin: 6px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.bar:hover {
+    background: #1c1c1c;
+}
+
+input[name='r'] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+/* FIN PROJET CSS */
 
 @media (min-width: 550px){
     body {
@@ -613,6 +728,20 @@ blockquote span {
     }
     blockquote {
         margin-top: 10%;
+    }
+
+    .pj-title {
+        margin: 10em 5em 1em;
+    }
+
+    .gallery {
+        margin-bottom: 2em;
+    }
+
+
+    .slider {
+        width: 70%;
+        height: 50vh;
     }
 }
 
@@ -829,6 +958,44 @@ blockquote span {
 
     /* FIN APROPOS CSS */
 
+    /* START PROJET CSS */
+
+    .pj-title p {
+        font-size: .8em;
+    }
+
+    .gallery {
+        height: 70vh;
+    }
+    .slider {
+        height: 100%;
+    }
+
+    .pj-title {
+        margin: 10em 0 1em 7em;
+    }
+    
+    .pj-content {
+        grid-template-columns: 20% 1fr;
+        margin-bottom: 2em;
+    }
+
+    .pj-content .side-card {
+        width: 100%;
+        height: 100%;
+    }
+    .pj-content .pj-text {
+        text-align: left;
+    }
+
+    .pj-content .pj-text p {
+        margin: 0;
+        font-size: .8em;
+    }
+
+
+    
+    /* START PROJET CSS */
 }
 
 @media (min-width: 1000px) {
@@ -917,6 +1084,14 @@ blockquote span {
 
     /* APROPOS CSS */
 
+    .pj-content {
+
+        width: 60vw;
+    }
+ 
+    .pj-title {
+        margin: 10em 0 1em 8em;
+    }
 
 
 }
@@ -939,6 +1114,10 @@ blockquote span {
 
     .experience {
         margin-top: 10%;
+    }
+
+    .pj-title {
+        margin: 10em 0 2em 11em;
     }
 
    
