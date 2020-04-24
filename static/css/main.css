@@ -456,12 +456,13 @@ blockquote {
     border-left: 8px solid #3e75a3;
     line-height: 1.6;
     position: relative;
-    background: #ededed;
+    background: rgba(237, 237, 237, 0.2);
+    color: #ededed;
 }
 blockquote::before {
     font-family: Arial, Helvetica, sans-serif;
     content: '\201C';
-    color: #3e75a3;
+    color: #ededed;
     font-size: 4em;
     position: absolute;
     left: 10px;
@@ -469,7 +470,7 @@ blockquote::before {
 }
 blockquote span {
     display: block;
-    color: #333333;
+    color: #ededed;
     font-style: normal;
     font-weight: bold;
     margin-top: 1em;
@@ -505,7 +506,7 @@ blockquote span {
 
 }
 
-.timeline li {
+.timeline ul li {
     line-height: normal;
     position: relative;
     list-style: none;
@@ -609,6 +610,9 @@ blockquote span {
     }
     .projetstitle {
         margin: 9em auto 7em 7em; 
+    }
+    blockquote {
+        margin-top: 10%;
     }
 }
 
@@ -716,6 +720,8 @@ blockquote span {
         margin-top: 0.5em;
     }
 
+    /* START CSS PROJETS */
+
     .projetstitle {
         margin: 8em 2em 7em 5em;
     }
@@ -728,6 +734,100 @@ blockquote span {
     .projects {
         width: 80vw;
     }
+
+    /* FIN CSS PROJETS */
+
+    /* START APROPOS CSS */
+
+    .jesuis {
+        margin: 7em 2em 2em auto;
+        width: 70%;
+    }
+    .jesuis p {
+        font-size: .7em;
+    }
+
+
+    .item-skills h4 {
+        width: 90%;
+        text-align: center;
+
+    }
+    .resume{
+        margin-top: 2em;
+    }
+    .item-resume {
+        font-size: .8em;
+    }
+
+    blockquote {
+        width: 40%;
+        font-size: .8em;
+    }
+
+    .timeline {
+        margin: 2em auto;
+        padding: 40px 0;
+        width: 90%;
+    }
+
+    .exp-content {
+        padding: 0 20px;
+    }
+
+    .timeline ul li {
+        width: 50%;
+        box-sizing: border-box;
+    }
+    .timeline ul li p {
+        margin: 1.2em 0;
+        width: 100%;
+        font-size: .7em;
+
+    }
+    .timeline ul li:nth-child(even) h3 {
+        margin-left: 0;
+    }
+    .timeline ul li:nth-child(even) h5 {
+        margin-left: 0;
+    }
+
+    .timeline::before {
+        left: 50%;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        left: 105%;
+        top: -10%;
+        width: 100px;
+    }
+
+    .timeline ul li:nth-child(even) .time {
+        left: -30%;
+        top: -8%;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        text-align: right;
+        clear: both;
+    }
+    .timeline ul li:nth-child(even) {
+        float: right;
+        text-align: left;
+        clear: both;
+    }
+
+
+    .timeline ul li:nth-child(odd)::before {
+        left: 99%;
+    }
+
+    .timeline ul li:nth-child(even)::before {
+        left: -3px;
+    }
+
+    /* FIN APROPOS CSS */
 
 }
 
@@ -791,12 +891,57 @@ blockquote span {
         margin: 8em 2em 7em 7em;
     }
 
+    /* APROPOS CSS */
+
+
+    .resume ul {
+        font-size: .7em;
+    }
+
+    .skills {
+        width: 80vw;
+    }
+
+    blockquote {
+        width: 25%;
+    }
+
+    .timeline {
+        width: 70%;
+    }
+
+    .timeline ul li p {
+        font-size: .6em;
+    }
+
+
+    /* APROPOS CSS */
+
+
+
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     .projetstitle {
         margin: 8em 2em 7em 10em;
     }
+
+    .timeline {
+        width: 50%;
+    }
+    .experience h2 {
+        margin-left: 8em;
+    }
+
+    .skillstitle {
+        margin: 5em auto 3em 12em;
+    }
+
+    .experience {
+        margin-top: 10%;
+    }
+
+   
 }
 
 
