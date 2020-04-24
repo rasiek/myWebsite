@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+    À propos
+{% endblock title %}
+
+{% block content %}
+
+<div class="jesuis fade-in">
+    <h1> Je suis<br/>Cristhian Casierra</h1>
+
+    <p>Passionné par la conception et la 
+    fabrication des produits, mes études 
+    et mes connaissances m’ont permis de 
+    m’adapter à diﬀérents domaines, 
+    en travaillant dans divers projets, 
+    allant dès éclairages jusqu’au packaging. 
+    Je crois tellement que la meilleure façon 
+    de faire des choses est à travers de 
+    l’expérience.</p>
+</div>
+
+<div class="resume">
+    <ul>
+        <li>
+            <div class="item-resume">
+                <i class="fas fa-paper-plane"></i>
+                <h2>10</h2>
+                <span>Pays visités</span>
+            </div>
+        </li>
+        <li>
+            <div class="item-resume" >
+                <i class="far fa-lightbulb"></i>
+                <h2>+15</h2>
+                <span>Projets realisés</span>
+            </div>
+        </li>
+        <li>
+            <div class="item-resume">
+                <i class="far fa-comment"></i>
+                <h2>3</h2>
+                <span>Langues parlées</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="skillstitle">
+    <h2>Skills</h2>
+</div>
+<div class="skills">
+    <div class="item-skills">
+        <img src="{{ url_for('static', filename='img/icon-boite.png') }}" alt="">
+        <h4>Modelisation 3D</h4>
+        <p>
+            Representation graphique des objets a l'aide des logiciels 
+            parametriques.
+            
+        </p>
+        <div>
+        <span>Solidworks</span><span>Rhino</span>
+    </div>
+    </div>
+    <div class="item-skills">
+        <img src="{{ url_for('static', filename='img/icon-crayon.png') }}" alt="">
+        <h4>Design de Produit</h4>
+        <p>
+            Representation graphiques des objets a l'aide des logiciels 
+            parametriques.
+            
+        </p>
+        <div>
+        <span>Design Thinking</span><span>Rhino</span>
+    </div>
+    </div>
+    <div class="item-skills">
+        <img src="{{ url_for('static', filename='img/icon-ecran.png') }}" alt="">
+        <h4>Creation Multimedia</h4>
+        <p>
+            Representation graphiques des objets a l'aide des logiciels 
+            parametriques.
+            
+        </p>
+        <div>
+        <span>Ae</span><span>Ai</span><span>Ps</span>
+    </div>
+    </div>
+
+    <div class="item-skills">
+        <img src="{{ url_for('static', filename='img/icon-code.png') }}" alt="">
+        <h4>Code</h4>
+        <p>
+            Representation graphiques des objets a l'aide des logiciels 
+            parametriques.
+            
+        </p>
+        <div>
+        <span>Solidworks</span><span>Rhino</span>
+        </div>
+    </div>
+
+</div>
+
+<blockquote>
+    The value, and especially the legitimization
+     of design will be, in the future, measured 
+    more in terms of how it can enable us to survive… on this planet.
+
+    <span>Dieter Rams</span> 
+</blockquote>
+
+
+<section class="experience">
+
+    <h2>Expérience</h2>
+
+    <div class="timeline">
+        <ul>
+            <li>
+                <div class="exp-content">
+                    <h3>Administrateur de projets</h3>
+                    <h5>Multiproyectos S.A.</h5>
+                    <p>Planiﬁcation et gestion de projets 
+                        d’aménagement d’espaces de travail 
+                        et commerciales. 
+                        Recherche des nouveaux clients.<br>
+                        <span>Bogotá - Colombie</span>
+                    </p>
+                </div>
+                <div class="time">
+                    <h4>Jul 2016<br/>Fev 2016</h4>
+                </div>
+            </li>
+
+            <li>
+                <div class="exp-content">
+                    <h3>Designer Indépendant</h3>
+                    <h5>Freelancer.com</h5>
+                    <p>
+                        Développement des projets en design multimédia,
+                        création des vidéos, animations et illustrations,
+                        création d’image de marque et modélisation 3D pour
+                        les particuliers. 
+                        J’ai renforcé mes connaissances dans la gestion 
+                        des logiciels numériques, j’ai acquis de 
+                        l’expérience en négociation et gestion de clients.<br>
+                        <span>Cali - Colombie</span>
+                    </p>
+                </div>
+                <div class="time">
+                    <h4>Oct 2015<br/>Mai 2014</h4>
+                </div>
+            </li>
+
+            <li>
+                <div class="exp-content">
+                    <h3>Designer Industriel</h3>
+                    <h5>Megaproyectos S.A.</h5>
+                    <p>
+                        Designer Industriel Conception de
+                        lumières de décoration Noël, Modélisation 3D
+                        et création de plans de fabrication des
+                        ﬁgurines de Noël.
+                        Exécution du montage des lumières.<br>
+                        <span>Cali - Colombie</span>
+                    </p>
+                </div>
+                <div class="time">
+                    <h4>Jav 2014<br/>Oct 2013</h4>
+                </div>
+            </li>
+
+            <li>
+                <div class="exp-content">
+                    <h3>Assistant de projets</h3>
+                    <h5>Baxter Healthcare Inc.</h5>
+                    <p>
+                        Conception, planiﬁcation et exécution
+                        des diﬀérents projets d’infrastructure
+                        pour les mise en conformité avec des
+                        régulations gouvernementales. 
+                        Création de mobilier industriel. 
+                        Première expérience professionnelle
+                        dans mon domaine, j’ai renforcé mes 
+                        aptitudes de travail en équipe, 
+                        j’ai également acquis de l’expérience
+                        dans la gestion des relations 
+                        interpersonnelles.<br>
+                        <span>Cali - Colombie</span>
+                    </p>
+                </div>
+                <div class="time">
+                    <h4>Avr 2013<br/>Sept 2012</h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+</section>
+
+
+{% endblock content %}

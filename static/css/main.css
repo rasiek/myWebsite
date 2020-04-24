@@ -1,0 +1,802 @@
+body {
+    margin: 0;
+    background: #1c1c1c;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Patua One';
+    font-weight: 400;
+}
+p, a {
+    font-family: 'Montserrat';
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-bg {
+    position: fixed;
+    background: url('../img/background.png');
+    background-position: 50% 20%;
+    width: 80vw;
+    height: 120vh;
+    z-index: -1;
+    right: 0;
+}
+
+.social {
+    position: absolute;
+}
+
+.social {
+    display: none;
+}
+
+header{
+    background: #1c1c1c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease-in;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+.header ul {
+    display: none;
+}
+.header i {
+    font-size: 25px;
+    color: #ededed;
+}
+
+.header img {
+    width: 250px;
+    padding-left: 1em;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ededed;
+    overflow-x: hidden;
+    padding-top: 40px;
+    transition: 0.5s ease;
+}
+.sidenav a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #1c1c1c;
+    display: block;
+    transition: 0.5s ease;
+}
+.sidenav a:hover {
+    color: #248232;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+.hero {
+    padding: 9em 1em 9em 2em;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.05em;
+    color: #ededed;
+
+}
+
+.hero span i {
+    font-size: 1.5em;
+    color: #ededed;
+}
+
+.feature {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: 35vw;
+    gap: 1em;
+    margin: auto;
+
+}
+.feature .img1 {
+    background-image: url('../img/placeholder.png');
+    background-position: center;
+    background-size: cover;
+}
+.feature .img2 {
+    background-image: url('../img/placeholder.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+.feature .img3 {
+    background-image: url('../img/placeholder.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.feature h3 {
+    padding-left: 1em;
+    font-size: 2em;
+    color: #ededed;
+    font-weight: 400;
+}
+
+.proj {
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    margin: 4em auto;
+}
+.overview h3 {
+    padding-left: 1em;
+    font-size: 2em;
+    font-weight: 400;
+    color: #ededed;
+
+}
+
+.bio {
+    align-self: center;
+    position: relative;
+}
+.overview .img {
+    width: 40vw;
+    height: 40vw;
+    background-image: url('../img/placeholder.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.overview p {
+    color: #ededed;
+    text-align: center;
+    padding: 2em 5em;
+}
+
+
+footer {
+    background: #ededed;
+    display: grid;
+    gap: 1.5em;
+    padding: 2em 2em 0.2em 2em;
+}
+footer .imgs {
+    margin: auto;
+}
+footer .logo {
+    width: 20vw;
+}
+footer .text-logo {
+    width: 50vw;
+}
+footer .item {
+    justify-self: center;
+}
+
+footer ul {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+footer ul .icons {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+footer h5 {
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+footer h5 a {
+    font-family: 'Patua One';
+    color: #1c1c1c;
+}
+footer h5 a:hover {
+    color: blue;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.projetstitle {
+    margin: 7em 2em 7em 3em; 
+}
+.projetstitle p {
+    padding-right: 3em;
+}
+
+.projects {
+    width: 60vw;
+}
+
+.projetstitle h3 {
+    font-size: 2em;
+    color: #ededed;
+}
+.projetstitle p {
+    color: #ededed;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5em;
+    width: 70vw;
+    margin: 4em auto;
+    z-index: -1;
+}
+.projects .card {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background: #fff;
+    transition:  0.5s ease;
+    z-index: 0;
+}
+.projects .card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, .1);
+}
+.projects .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .card .face.face1 {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: #1c1c1c;
+    color: #ededed;
+    font-size: 20px;
+}
+
+.projects .card .face.face1 p {
+    margin: auto 1em;
+}
+.projects .card .face.face1 p {
+    margin-top: 4.8em;
+}
+
+.projects .card .face.face1 a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ededed;
+    border: 2px solid #ededed;
+}
+
+.projects .card .face.face1 a:hover {
+    color: #1c1c1c;
+    background: #ededed;
+}
+
+.projects .card .face.face2 {
+    background: #ededed;
+    transition: 0.5s ease;
+
+}
+.projects .card:hover .face.face2 {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+
+    color: #ededed;
+}
+.projects .card .face.face2 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    color: #1c1c1c;
+    transition: 0.5s ease;
+}
+.projects .card:hover .face.face2 h2 {
+    color: #ededed;
+    font-size: 1.5em;
+}
+
+
+
+
+/* START CSS APROPOS */
+
+.jesuis{
+    
+    width: 80vw;
+    margin: 12em auto 1em;
+    color: #ededed;
+    text-align: left;
+}
+
+.jesuis p {
+    margin: auto 1.2em;
+}
+.resume {
+    margin: 3em auto;
+}
+.resume ul {
+    display: flex;
+    justify-content: center;
+}
+.item-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto .5em;
+    font-family: 'Montserrat';
+    color: #ededed;
+}
+.item-resume h2 {
+    margin: .2em auto;
+    text-align: center;
+}
+.item-resume span {
+    font-size: .8em;
+}
+.item-resume i {
+    font-size: 1.8em;
+}
+
+.skillstitle {
+    margin: 5em auto 3em 4em;
+    color: #ededed;
+}
+
+.skills {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+
+}
+
+.item-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ededed;
+}
+
+.item-skills h4 {
+    margin: 0 auto;
+}
+
+.item-skills p {
+    text-align: center;
+    margin: .5em 1.5em;
+    font-size: .6em;
+}
+
+.item-skills img {
+    margin-top: .5em;
+    width: 10vw;
+}
+
+.item-skills span {
+    font-size: .6em;
+    color: #ededed;
+    font-family: 'Montserrat';
+    background: #3e75a3;
+    border-radius: 15%;
+    padding: .2em;
+    margin: 0.4em;
+}
+
+.item-skills div {
+    margin-bottom: .4em;
+}
+
+blockquote {
+    font-family: 'Montserrat';
+    font-size: 1em;
+    width: 60%;
+    margin: 50px auto;
+    font-style: italic;
+    padding: 1.2em 30px 1.2em 50px;
+    border-left: 8px solid #3e75a3;
+    line-height: 1.6;
+    position: relative;
+    background: #ededed;
+}
+blockquote::before {
+    font-family: Arial, Helvetica, sans-serif;
+    content: '\201C';
+    color: #3e75a3;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+blockquote span {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/* TIMELINE */
+
+.experience h2 {
+    margin-left: 3em;
+    color: #ededed;
+}
+
+.timeline {
+    position: relative;
+    margin: 3em  0 3em auto;
+    width: 80%;
+    padding: 1em 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #3e75a3;
+
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.timeline li {
+    line-height: normal;
+    position: relative;
+    list-style: none;
+    padding: 20px 0;
+
+}
+
+.exp-content {
+    padding-bottom: 20px;
+}
+
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(62, 117, 163, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(62, 117, 163, 0.2);
+    left: -3px;
+}
+
+.timeline ul li h3 {
+    margin: -0.4em 0 0 30px;
+    padding: 0;
+    font-weight: 400;
+    color: #3e75a3
+}
+
+.timeline ul li p {
+     margin: 1em 0 0 40px;
+     font-size: .9em;
+     width: 80%;
+     color: #ededed;
+}
+.timeline ul li span {
+    font-weight: 600;
+
+}
+
+.timeline ul li h5 {
+    margin: 0.3em 0 0.3em 30px;
+    color: #ededed;
+}
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: -7%;
+    left: -23%;
+    text-align: center;
+    color: #ededed;
+    font-weight: 400;
+
+}
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: -4%;
+    left: -23%;
+    text-align: center;
+    color: #ededed;
+    font-weight: 400;
+
+}
+
+
+
+
+/* FIN CSS APROPOS */
+
+
+@media (min-width: 550px){
+    body {
+        font-size: 18px;
+    }
+    .header img {
+        width: 300px;
+    }
+    .feature {
+        gap: 2em;
+    }
+    .feature img {
+        width: 80vw;
+    }
+    .overview {
+        margin-top: 2em;
+    }
+
+    .feature h3 {
+        padding-left: 2em;
+    }
+    .overview h3 {
+        padding-left: 2em;
+    }
+    .overview .img {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    footer {
+        gap: 2em;
+    }
+    .projetstitle {
+        margin: 9em auto 7em 7em; 
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        font-size: 22px;
+    }
+    .header .menu {
+        display: none;
+    }
+    .header ul {
+        display: flex;
+    }
+    .header li a {
+        color: #ededed;
+        text-decoration: none;
+        display: block;
+        padding: .3em .3em;
+        font-size: .7em;
+    }
+    .social {
+        display: unset;
+        z-index: 0;
+        right: .8em;
+        top: 45%;
+        font-size: 1.2em;
+    }
+    .social li {
+        margin-bottom: .6em;
+        color: #ededed;
+    }
+
+    .hero {
+        padding: 7em 3em 9em 2em;
+    }
+    .hero span i {
+        margin-left: .5em;
+    }
+    .feature {
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        width: 90vw;
+        margin: auto;
+    }
+    .feature img {
+        width: 100%;
+    }
+    .feature h3 {
+        grid-column: 1 / 3;
+    }
+    .bio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .overview {
+        margin: 5em auto;
+    }
+    .overview .img {
+        height: 15vw;
+        width: 15vw;
+        margin: 0;
+    }
+    .bio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+    .bio p {
+        font-size: .6em;
+        width: 50%;
+        text-align: left;
+        padding-left: 0;
+    }
+    .bio .img {
+        justify-self: end;
+    }
+    footer {
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 0;
+    }
+    .imgs .logo {
+        width: 30%;
+        margin-left: 70%;
+    }
+    .imgs .text-logo {
+        width: 100%;
+    }
+
+    footer h5 {
+        grid-column: 1 / 3;
+        margin-bottom: 0.2em;
+        justify-self: center !important;
+    }
+    footer ul {
+        text-align: left;
+        line-height: 1.2em;
+    }
+    footer .item {
+        justify-self: start;
+    }  
+
+    footer ul .icons {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+    }
+
+    .projetstitle {
+        margin: 8em 2em 7em 5em;
+    }
+
+    .projetstitle p {
+        font-size: .8em;
+    }
+
+
+    .projects {
+        width: 80vw;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    body {
+        font-size: 25px;
+    }
+    .header {
+        width: 980px;
+        margin: auto;
+    }
+    .header li a {
+        font-size: .7em;
+    }
+
+    .hero {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .feature {
+        width: 1000px !important;
+        height: 100vh;
+        margin: auto !important;
+        grid-template: auto 1fr 1fr / 1fr 1fr;
+        gap: .5em;
+        margin: auto;
+    }
+
+    .feature .img1 {
+        grid-row: 2 / -1;
+    }
+
+    .overview {
+        width: 1000px;
+    }
+
+    .imgs .logo {
+        width: 20%;
+        margin-left: 80%;
+    }
+    .imgs .text-logo {
+        width: 60%;
+        margin-left: 40%;
+    }
+
+    footer ul {
+        font-size: .8em;
+    }
+
+    .main-bg {
+        background-position: 100% 0;
+        background-repeat: no-repeat;
+    }
+    .projects {
+        width: 75vw;
+        gap: 2em;
+    }
+
+    .projetstitle {
+        margin: 8em 2em 7em 7em;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .projetstitle {
+        margin: 8em 2em 7em 10em;
+    }
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/ico">
+    <title>{% block title %}
+    Cristhian Casierra |
+    {% endblock  %}</title>
+</head>
+<body>
+    <div class="main-bg"></div>
+    <header id="header">
+        <div class="header">
+        <a href="{{ url_for('index')}}" class="logo">
+            <img src="{{ url_for('static', filename='img/cristhian-casierra.png') }}" alt="logo">
+        </a>
+
+        <nav>
+            <a href="javascript:void(0);" class="icon menu" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul>
+                <li><a href="{{ url_for('apropos')}}">À propos</a></li>
+                <li><a href="{{ url_for('projets')}}">Projets</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div id="sideNav" class="sidenav">
+            <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">
+                <i class="fas fa-times"></i>
+            </a>
+            <a href="{{ url_for('apropos')}}">À propos</a>
+            <a href="{{ url_for('projets')}}">Projets</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+{% block content %}
+
+
+{% endblock content %}
+
+<footer>
+    <div class="imgs">
+       <img class="logo item" src="{{ url_for('static', filename='img/logo-black.png') }}" alt="logo">
+       <img class="text-logo item" src="{{ url_for('static', filename='img/logo-text-black.png') }}" alt="logo-text">
+    </div>
+    <ul class="item">
+        <li><a href="">À propos</a></li>
+        <li><a href="">Projets</a></li>
+        <li><a href="">Contact</a></li>
+        <li class="icons">
+            <span>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-instagram"></i>
+            </span>
+
+        </li>
+    </ul>
+   <h5 class="item"><a href="">Politique de confidentialité</a> | @ 2020 tous droits réservés.<br>Made by <a href="">me</a></h5>
+</footer>
+
+<script src="https://kit.fontawesome.com/3acd985528.js" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

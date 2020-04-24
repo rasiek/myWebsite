@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+    Accueil
+{% endblock title %}
+
+{% block content %}
+
+<ul class="social">
+    <li><i class="fab fa-github"></i></li>
+    <li><i class="fab fa-linkedin-in"></i></li>
+    <li><i class="fab fa-instagram"></i></li>
+</ul>
+
+<section class="hero fade-in">
+    <h1>Designer industriel <br> passionné par python et le developpement web.</h1>
+    <span>
+        <i class="fas fa-cube"></i>
+        <i class="fab fa-python"></i>
+        <i class="fas fa-code"></i>
+    </span>
+</section>
+
+<section class="feature">
+    <h3 >Projets</h3>
+
+    <div class="proj img1"></div>
+    <div class="proj img2"></div>
+    <div class="proj img3"></div>
+
+</section>
+
+<section class="overview">
+    <h3>À propos</h3>
+    <div class="bio">
+        <div class="img"></div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Know more <a href="">here</a>  
+        </p>
+    </div>
+</section>
+
+{% endblock content %}
