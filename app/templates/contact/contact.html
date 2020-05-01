@@ -1,0 +1,61 @@
+{% extends 'public/templates/base.html' %}
+
+{% block title %}
+    {{ super() }}
+    Contact
+{% endblock title %}
+
+{% block content %}
+
+<div class="contact-title">
+    <h1>Contact</h1>
+    <p>
+        Besion d'aide dans vos pojets?<br/>
+        Je vous ecoute!
+    </p>
+</div>
+
+
+<div class="contact-info">
+    <h4>Ecrivez-moi à l'adresse:</h4>
+    <p><span><i class="fas fa-envelope"></i></span> ccasierra88@hotmail.com</p>
+    <p>ou contectez-moi par le formulaire ci-dessous</p>
+</div>
+
+<div class="contact-content">
+    <div class="contact-form">
+        <form action="{{ url_for('contact') }}" method="POST" class="form-container">
+            <div>
+            {{ contact_form.name.label }}
+            {{ contact_form.name(class_="input-field") }}
+            </div>
+
+            <div>
+            {{ contact_form.email.label }}
+            {{ contact_form.email(class_="input-field") }}
+            </div>
+
+            <div>
+            {{ contact_form.sujet.label }}
+            {{ contact_form.sujet(class_="input-field") }}
+            </div>
+
+            <div class="message-field">
+            {{ contact_form.message.label(class_="input-message") }}
+            {{ contact_form.message }}
+            </div>
+            {{ contact_form.submit(class_="input-submit") }}
+        </form>
+    </div>
+
+    <div class="contact-map">
+        <h3>Basé à Rennes</h3>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42619.29323369108!2d-1.7234739102372063!3d48.1159102306187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede2fa7d69085%3A0x40ca5cd36e4ab30!2sRennes!5e0!3m2!1sen!2sfr!4v1587746581899!5m2!1sen!2sfr" width="800" height="280" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

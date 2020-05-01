@@ -1,14 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'public/templates/base.html' %}
 
 {% block title %}
     {{ super() }}
-    Projet
+    {{ id }}
 {% endblock title %}
 
 {% block content %}
 
-    <div class="pj-title">
-        <h1>Title</h1>
+    <div class="pj-title fade-in">
+        <h1>{{ id|capitalize }}</h1>
         <span>Institution</span><span>Tache</span>
         <p>
             Lorem ipsum dolor sit amet,
