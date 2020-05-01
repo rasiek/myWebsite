@@ -14,7 +14,6 @@ window.addEventListener('scroll', function() {
 
     var scrolled = window.pageYOffset;
     var rate = scrolled * 0.1;
-    this.console.log(rate)
 
     target.style.top = '-'+rate+'px'
 });
@@ -24,7 +23,6 @@ function openNav() {
 
   }
   
-  /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
   function closeNav() {
     document.getElementById("sideNav").style.width = "0";
 

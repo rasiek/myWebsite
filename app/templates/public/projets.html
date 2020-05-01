@@ -9,190 +9,32 @@
 
 <div class="projetstitle fade-in">
     <h3>Projets</h3>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+    <p>Bref exposé de travaux de design durant mes
+        expériences tant académiques que professionnelles,
+        dont vous pourrez trouver établie ma vision de l'usage
+        du design comme moyen pour générer de la valeur.</p>
 </div>
 <section class="projects">
 
-    <div class="card">
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="/projets/plie">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Plie</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="/projets/teru">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="/projets/miroir">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="#">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
+    {% for work in works  %}
         
-    </div>
-
     <div class="card">
-
         <div class="face face1">
             <div class="content">
                 <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
+                <p> 
+                    {{ work.meta_descript }}
                 </p>
-                <a href="#">Voir projet</a>
+                <a href="/projets/{{ work.title }}">Voir projet</a>
             </div>
         </div>
         <div class="face face2">
             <div class="img-card">
-                <h2>Teru</h2>
+                <h2>{{ work.title }}</h2>
             </div>
         </div>
-        
     </div>
-
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="#">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-        
-    </div>
-
-
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="#">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="#">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="card">
-
-        <div class="face face1">
-            <div class="content">
-                <!-- <h4>Teru</h4> -->
-                <p> Lorem ipsum dolor sit amet, consectetuer 
-                adipiscing elit, sed diam nonummy nibh 
-                euismod tincidunt. 
-                </p>
-                <a href="#">Voir projet</a>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="img-card">
-                <h2>Teru</h2>
-            </div>
-        </div>
-        
-    </div>
-    
-
+    {% endfor %}
+ 
 </section>
 {% endblock content %}

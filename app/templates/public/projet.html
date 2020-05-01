@@ -1,18 +1,29 @@
 {% extends 'public/templates/base.html' %}
 
+
+
 {% block title %}
     {{ super() }}
-    {{ id }}
+    {{ work.title }}
 {% endblock title %}
 
 {% block content %}
-
+        
     <div class="pj-title fade-in">
-        <h1>{{ id|capitalize }}</h1>
-        <span>Institution</span><span>Tache</span>
+        <h1>{{ work.title|capitalize }}</h1>
+        {% if work.is_academique %}
+
+            <span><strong>Institution</strong> {{ work.organisation }}</span><span> <strong>Sujet</strong> {{ work.task }}</span>
+        
+        {% else %}
+
+            <span><strong>Entreprise</strong> {{ work.institution }}</span><span> <strong>Tâche</strong> {{ work.task }}</span>
+
+        
+        {% endif %}
         <p>
-            Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit, sed diam nonummy.
+            {{ work.meta_descript }}
+            {{ work.pj_imgs.hero }}
         </p>
     </div>
 
@@ -26,23 +37,22 @@
                 <input type="radio" name="r" id="r4">
 
                 <div class="slide s1">
-                    <img src="{{ url_for('static', filename='img/placeholder.png') }}" alt="">
+                    <style>
+                        .slide.s1 {
+                         background-image: url("{{ url_for('static',filename=pj_imgs.hero_img) }}");
+                        }   
+                    </style>
                 </div>
 
-                <div class="slide">
-                    <img src="{{ url_for('static', filename='img/placeholder2.png') }}" alt="">
-                    
-                </div>
+                {% for img in pj_imgs.several_img %}
 
-                <div class="slide">
-                    <img src="{{ url_for('static', filename='img/placeholder3.png') }}" alt="">
-                    
-                </div>
+                    <div class="slide">
 
-                <div class="slide">
-                    <img src="{{ url_for('static', filename='img/placeholder4.png') }}" alt="">
+                        <img src="{{ url_for('static', filename=pj_imgs.several_img[loop.index0]) }}" alt="">
+    
+                    </div>
 
-                </div>
+                {% endfor %}
 
             </div>
 
@@ -60,23 +70,34 @@
 
     <div class="pj-content">
         <div class="side-card">
-            <p>
-                Lorem ipsum dolor sit, amet consectetur
-                 adipisicing elit. Nisi eaque provident
-                  facilis doloremque non, quos, debitis
-                   repudiandae rerum vitae ab vero?
-            </p>
+            {% if work.title == 'teru' %}
+                <div class="side-card-elem">
+                    <h3>300%</h3>
+                    <p>d'accroissement de la productivité</p>
+                </div>
+
+                <div class="side-card-elem">
+                    <h3>+5</h3>
+                    <p>de types de fruits et legumes</p>
+                </div>
+            {% endif %}
+
+            {% if work.title == 'plie' %}
+                <div class="side-card-elem">
+                    <h3>Papier</h3>
+                    <p>utilisé pour donner l'effet resort</p>
+                </div>
+                <div class="side-card-elem">
+                    <h3>Arduino</h3>
+                    <p>pour controller l'allumage et l'éteint</p>
+                </div>
+            {% endif %}
         </div>
         <div class="pj-text">
             <p>
-                Lorem ipsum dolor sit, amet consectetur
-                 adipisicing elit. Nisi eaque provident
-                  facilis doloremque non, quos, debitis
-                   repudiandae rerum vitae ab vero? 
-                   Quam sapiente repudiandae sed quas 
-                   a dolores ipsum minima?
+                {{ work.description }}
             </p>
         </div>
     </div>
-
-{% endblock content %}
+        
+    {% endblock content %}
