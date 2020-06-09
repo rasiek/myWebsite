@@ -10,14 +10,14 @@
 {% block content %}
         
     <div class="pj-title fade-in">
-        <h1>{{ work.title|capitalize }}</h1>
+        <h1>{{ work.title|title }}</h1>
         {% if work.is_academique %}
 
             <span><strong>Institution</strong> {{ work.organisation }}</span><span> <strong>Sujet</strong> {{ work.task }}</span>
         
         {% else %}
 
-            <span><strong>Entreprise</strong> {{ work.institution }}</span><span> <strong>Tâche</strong> {{ work.task }}</span>
+            <span><strong>Entreprise</strong> {{ work.organisation }}</span><span> <strong>Tâche</strong> {{ work.task }}</span>
 
         
         {% endif %}
@@ -28,41 +28,14 @@
     </div>
 
     <section class="gallery">
-        <div class="slider middle">
-            <div class="slides">
-                
-                <input type="radio" name="r" id="r1" checked>
-                <input type="radio" name="r" id="r2">
-                <input type="radio" name="r" id="r3">
-                <input type="radio" name="r" id="r4">
+            <img src="{{ url_for('static', filename=pj_imgs.hero_img) }}" alt="">
 
-                <div class="slide s1">
-                    <style>
-                        .slide.s1 {
-                         background-image: url("{{ url_for('static',filename=pj_imgs.hero_img) }}");
-                        }   
-                    </style>
-                </div>
+            {% for img in pj_imgs.several_img %}
 
-                {% for img in pj_imgs.several_img %}
+                    <img src="{{ url_for('static', filename=pj_imgs.several_img[loop.index0]) }}" alt="">
 
-                    <div class="slide">
+            {% endfor %}
 
-                        <img src="{{ url_for('static', filename=pj_imgs.several_img[loop.index0]) }}" alt="">
-    
-                    </div>
-
-                {% endfor %}
-
-            </div>
-
-            <div class="img-navbar">
-                <label for="r1" class="bar"></label>
-                <label for="r2" class="bar"></label>
-                <label for="r3" class="bar"></label>
-                <label for="r4" class="bar"></label>
-            </div>
-        </div>
     </section>
 
 
@@ -78,18 +51,18 @@
 
                 <div class="side-card-elem">
                     <h3>+5</h3>
-                    <p>de types de fruits et legumes</p>
+                    <p>de types de fruits et légumes</p>
                 </div>
             {% endif %}
 
             {% if work.title == 'plie' %}
                 <div class="side-card-elem">
                     <h3>Papier</h3>
-                    <p>utilisé pour donner l'effet resort</p>
+                    <p>utilisé pour donner l'effet ressort</p>
                 </div>
                 <div class="side-card-elem">
                     <h3>Arduino</h3>
-                    <p>pour controller l'allumage et l'éteint</p>
+                    <p>pour contrôler l'allumage et l'éteint</p>
                 </div>
             {% endif %}
         </div>

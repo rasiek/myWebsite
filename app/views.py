@@ -8,7 +8,14 @@ from flask import render_template
 
 @app.route('/')
 def index():
-    return render_template('public/index.html')
+    works = Work.query.all()
+    pj_imgs = Project_img.query.all()
+    
+    context = {
+        "works": works,
+        "pj_imgs": pj_imgs
+    }
+    return render_template('public/index.html', **context)
 
 @app.route('/projets')
 def projets():

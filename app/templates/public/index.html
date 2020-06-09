@@ -8,13 +8,13 @@
 {% block content %}
 
 <ul class="social">
-    <li><i class="fab fa-github"></i></li>
-    <li><i class="fab fa-linkedin-in"></i></li>
-    <li><i class="fab fa-instagram"></i></li>
+    <li><a href="https://github.com/rasiek" target="_blank"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://fr.linkedin.com/in/cristhian-camilo-casierra-21403727" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="https://www.instagram.com/ccamilo88/" target="_blank"><i class="fab fa-instagram"></i></a></li>
 </ul>
 
 <section class="hero fade-in">
-    <h1>Designer industriel <br> passionné par python et le developpement web.</h1>
+    <h1>Designer industriel <br> passionné par python et le développement web.</h1>
     <span>
         <i class="fas fa-cube"></i>
         <i class="fab fa-python"></i>
@@ -24,10 +24,23 @@
 
 <section class="feature">
     <h3 >Projets</h3>
+    {% set img1 = pj_imgs|random %}
+    {% set img2 = pj_imgs|random %}
+    {% if img1 == img2 %}
+    {% set img2 = pj_imgs|random %}
+    {% endif %}
+    {% set img3 = pj_imgs|random %}
+    {% if img1 == img3 or img2 == img3 %}
+    {% set img3 = pj_imgs|random %}
+    {% endif %}
+    
+    <div class="f_container">
+        <img class= "f_imgs" src="{{ url_for('static', filename=img1.hero_img) }}" alt="">
+        <img class="f_imgs" src="{{ url_for('static', filename=img2.hero_img) }}" alt="">
+        <img class="f_imgs" src="{{ url_for('static', filename=img3.hero_img) }}" alt="">
+    </div>
 
-    <div class="proj img1"></div>
-    <div class="proj img2"></div>
-    <div class="proj img3"></div>
+    <a href="{{ url_for('projets')}}">Voir tous</a>
 
 </section>
 
@@ -36,7 +49,7 @@
     <div class="bio">
         <div class="img"></div> 
         <p>
-            Etudiant des Arts Numériques et programmation, Passionné par la conception et la fabrication des produits technologiques. En savoir plus <a href="{{ url_for('apropos') }}">ici</a>  
+            Étudiant des Arts Numériques et programmation, Passionné par la conception et la fabrication des produits technologiques.<br/>En savoir plus <a href="{{ url_for('apropos') }}">ici</a>  
         </p>
     </div>
 </section>
