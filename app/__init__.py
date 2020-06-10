@@ -1,12 +1,17 @@
 from flask import Flask
-from config import DevelopementConfig
+import config
 from flask_sqlalchemy import SQLAlchemy
 
 
 
 app = Flask(__name__)
-app.config.from_object(DevelopementConfig)
+if app.config["ENV"] == "production":
+    app.config.from_object("config.ProductionConfig")
+else:
+    app.config.from_object("config.DevelopmentConfig")
 db = SQLAlchemy(app)
+
+print(f'ENV is set to: {app.config["ENV"]}')
 
 
 

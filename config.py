@@ -8,12 +8,12 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     DEBUG = False
     TESTING = False
-    SECRET_KEY = 'secret-key'
+    SECRET_KEY = os.urandom(24)
 
-    pg_user = "postgres"
-    pg_pwd = "Meneaelbote1157"
-    pg_port = "5432"
-    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:Meneaelbote1157@localhost/pj_flask2"
+    pg_user = os.environ.get("PG_USER")
+    pg_pwd = os.environ.get("PG_PWD")
+    pg_port = os.environ.get("PG_PORT")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
@@ -21,7 +21,7 @@ class ProductionConfig(Config):
     pass
 
 
-class DevelopementConfig(Config):
+class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
 
