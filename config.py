@@ -6,9 +6,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config(object):
-    DEBUG = True
+    DEBUG = False
     TESTING = False
-    SECRET_KEY = os.urandom(24)
+    SECRET_KEY = os.environ.get("SECRET_KEY")
 
     pg_user = os.environ.get("PG_USER")
     pg_pwd = os.environ.get("PG_PWD")
