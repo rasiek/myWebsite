@@ -51,9 +51,9 @@
        <img class="text-logo item" src="{{ url_for('static', filename='img/logo-text-black.png') }}" alt="logo-text">
     </div>
     <ul class="item">
-        <li><a href="">À propos</a></li>
-        <li><a href="">Projets</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="{{ url_for('apropos')}}">À propos</a></li>
+        <li><a href="{{ url_for('projets')}}">Projets</a></li>
+        <li><a href="{{ url_for('contact')}}">Contact</a></li>
         <li class="icons">
             <span>
                 <a href="https://github.com/rasiek" target="_blank">
@@ -69,7 +69,7 @@
 
         </li>
     </ul>
-   <h5 class="item"><a href="">Politique de confidentialité</a> | © 2020 tous droits réservés.<br>réalisé par <a href="">moi</a></h5>
+   <h5 class="item"><a href="">Politique de confidentialité</a> | © 2020 tous droits réservés.<br>réalisé sur Flask par <a href="">moi</a></h5>
 </footer>
 
 <script src="https://kit.fontawesome.com/3acd985528.js" crossorigin="anonymous"></script>
