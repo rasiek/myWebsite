@@ -49,7 +49,6 @@ Typewriter.prototype.type = function() {
 
   const currentWord = this.wordIndex % this.words.length
   const fullTxt = this.words[currentWord]
-  console.log(fullTxt)
 
   if(this.isDeleting) {
     
@@ -70,7 +69,6 @@ Typewriter.prototype.type = function() {
     }
     
   }
-  console.log(currentWord)
 
   this.txtElement.innerHTML = this.txt
   setTimeout(() => this.type(), 200)
@@ -78,7 +76,6 @@ Typewriter.prototype.type = function() {
 
 const init = () => {
     const txtElement = document.getElementById("typewriter")
-    console.log(txtElement)
 
     new Typewriter(txtElement, words)
 
