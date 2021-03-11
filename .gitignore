@@ -4,3 +4,4 @@ migrations
 app.db
 app.wsgi
 config.py
+.flaskenv

@@ -22,4 +22,4 @@ print(f'ENV is set to: {app.config["ENV"]}')
 
 
 
-from app import views, admin_views, contact_views, models
+from app import views, contact_views, models
