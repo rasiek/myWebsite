@@ -31,7 +31,7 @@ window.addEventListener('scroll', function() {
 
   // Typewriting func
 
-const words = ["Création Multimedia", "Création de Produit", "Dévelopement Backend", "Dévelopement Logiciel", "Arduino"] 
+const words = ["Dévelopement Backend", "Dévelopement Logiciel", "Création de Produit", "Dévelopement Arduino", "Création Multimedia"] 
 
 const Typewriter = function(txtElement, words) {
 
@@ -39,8 +39,8 @@ const Typewriter = function(txtElement, words) {
   this.words = words
   this.txt = ''
   this.wordIndex = 0
-  this.wait = 3000
   this.type()
+  this.switch = false
   this.isDeleting = false
 
 }
@@ -49,14 +49,24 @@ Typewriter.prototype.type = function() {
 
   const currentWord = this.wordIndex % this.words.length
   const fullTxt = this.words[currentWord]
+  const cursor = document.getElementById("t-cursor")
 
   if(this.isDeleting) {
     
     this.txt = fullTxt.substring(0, this.txt.length -1)
 
-    if (this.txt.length == 0) {
-      this.isDeleting = false    
-      this.wordIndex = this.wordIndex + 1
+    if (this.txt.length <= 0) {
+      cursor.classList.add("blink")
+      if (this.switch) {
+        setTimeout(() => {
+          this.isDeleting = false
+          this.wordIndex = this.wordIndex + 1
+          cursor.classList.remove("blink")
+        }, 2000)
+
+        this.switch = false
+      }
+
     }
 
 
@@ -65,7 +75,13 @@ Typewriter.prototype.type = function() {
     this.txt = fullTxt.substring(0, this.txt.length + 1)
 
     if (this.txt.length == fullTxt.length) {
-      setTimeout(() => { this.isDeleting = true}, 2000)
+      
+      cursor.classList.add("blink")
+      setTimeout(() => { 
+        this.isDeleting = true
+        cursor.classList.remove("blink")
+        this.switch = true
+      }, 2000)
     }
     
   }
