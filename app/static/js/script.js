@@ -31,7 +31,7 @@ window.addEventListener('scroll', function() {
 
   // Typewriting func
 
-const words = ["Dévelopement Backend", "Dévelopement Logiciel", "Création de Produit", "Dévelopement Arduino", "Création Multimedia"] 
+const words = ["Développement Backend", "Développement Logiciel", "Création de Produit", "Développement Arduino", "Création Multimédia"] 
 
 const Typewriter = function(txtElement, words) {
 

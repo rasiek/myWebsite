@@ -263,6 +263,7 @@ header{
     padding: .5rem .5rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.3), -1px -1px 20px rgba(255, 255, 255, 0.3);
 }
 
 .overview p {
