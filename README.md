@@ -1,7 +1,6 @@
 # myWebsite
 
-Portfolio website showcasing some of my works. Site developed using Flask as backend, PostgreSQL as database
-and good ol' HTML, CSS and Javascript for the frontend. For deployment an AWS EC2 Linux server is used running Apache2 as Web server.
+v0.1 of my portfolio website. This site was developed using Flask in the backend and PostgreSQL as database. It was deployed until late september in an AWS EC2 Linux server that runned Apache2 as Web server.
 
 ## Technologies
 
